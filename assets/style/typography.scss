@@ -1,0 +1,43 @@
+h1, h2, h3, h4 {
+  font-family: $font-sans;
+}
+
+h1 {
+  font-size: 14px;
+  letter-spacing: .3px;
+  margin-bottom: .5rem;
+  transition: color $transition-default linear;
+  font-weight: $font-weight-default;
+
+  &.speaker {
+    font-weight: $font-weight-bold;
+  }
+}
+
+h2 {
+  font-size: 14px;
+  letter-spacing: .3px;
+  line-height: 1.5;
+  font-weight: $font-weight-default;
+}
+
+span {
+  font-family: $font-mono;
+
+  &.time {
+    font-size: 10px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    padding-top: 3px;
+    transition: color $transition-default ease;
+  }
+}
+
+.isNow {
+  color: $color-accent;
+}
+
+.isPast {
+  color: rgba(0, 0, 0, 0.4);
+}

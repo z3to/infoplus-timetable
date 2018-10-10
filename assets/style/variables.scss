@@ -1,0 +1,38 @@
+$font-sans: suisse-intl, Helvetica, Arial, sans-serif !default;
+$font-mono: "suisse-intl-mono", monospace !default;
+
+$font-family-default: $font-sans !default;
+
+$font-weight-default: 400 !default;
+$font-weight-bold: 700 !default;
+
+$base-line-height: 1.7 !default;
+
+$spacing:     2rem !default;
+
+$color-default:	rgba(0, 0, 0, .9) !default;
+$color-accent: 	#f90000 !default;
+
+$size-smallest:		0.7rem !default;
+$size-smaller:		0.8rem !default;
+$size-small:			0.7rem !default;
+$size-default:		0.8rem !default;
+$size-big:				1.1rem !default;
+$size-bigger:			1.8rem !default;
+
+$spacing-default:	0.01em !default;
+$spacing-wide:		0.02em !default;
+$spacing-wider:		0.05em !default;
+$spacing-widest:	0.10em !default;
+
+$transition-default: 0.5s !default;
+
+$on-palm:          320px !default;
+$on-laptop:        768px !default;
+$on-desktop:       1224px !default;
+
+@mixin media-query($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
