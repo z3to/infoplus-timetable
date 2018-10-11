@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="slider">
     {{ display }}<br />
     <input type="range" v-model="position" :min="min" :max="max" step="1" />
   </section>
@@ -42,6 +42,13 @@
 
   input {
     width: 250px;
+  }
+
+  .slider {
+    position: fixed;
+    bottom: 0;
+    background-color: #222;
+    color: #fff;
   }
 
 </style>

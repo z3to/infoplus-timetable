@@ -3,19 +3,20 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 14px;
+  font-size: 3rem;
   letter-spacing: .3px;
-  margin-bottom: .5rem;
   transition: color $transition-default linear;
   font-weight: $font-weight-default;
+  padding-right: 0.5rem;
+  line-height: 1.2;
 
-  &.speaker {
+  &:not(.isAdministrative) {
     font-weight: $font-weight-bold;
   }
 }
 
 h2 {
-  font-size: 14px;
+  font-size: 2rem;
   letter-spacing: .3px;
   line-height: 1.5;
   font-weight: $font-weight-default;
@@ -25,12 +26,22 @@ span {
   font-family: $font-mono;
 
   &.time {
-    font-size: 10px;
+    font-size: 1rem;
     letter-spacing: .4px;
     text-transform: uppercase;
     line-height: 1.5;
     padding-top: 3px;
     transition: color $transition-default ease;
+  }
+
+  &.isKeynote {
+    display: inline-block;
+    font-size: 1rem;
+    padding: .15em .4em;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: #fff;
+    background: $color-accent;
   }
 }
 

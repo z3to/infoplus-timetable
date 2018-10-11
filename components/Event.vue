@@ -1,9 +1,12 @@
 <template>
   <li :class="{ 'event': true, isNow, isPast }">
     <span class="time">{{ startTime }}</span>
-    <hgroup>
-      <h1 class="speaker">{{ label }}</h1>
-      <h2>{{ subtitle }}</h2>
+    <hgroup class="title">
+      <header class="header">
+        <h1 :class="{ isAdministrative }">{{ author }}</h1>
+        <span v-if="isKeynote" :class="{ isKeynote }">Keynote</span>
+      </header>
+      <h2 v-if="!isAdministrative">{{ title }}</h2>
     </hgroup>
   </li>
 </template>
@@ -15,11 +18,17 @@
   import format from 'date-fns/format'
 
   export default {
-    props: ['label', 'start', 'duration', 'startDatetime', 'endDatetime', 'subtitle'],
+    props: ['category', 'title', 'author', 'start', 'duration', 'startDatetime', 'endDatetime', 'subtitle'],
     computed: {
       ...mapState([
         'currentDatetime'
       ]),
+      isAdministrative: function () {
+        return this.category === 'administrative'
+      },
+      isKeynote: function () {
+        return this.category === 'keynote'
+      },
       isPast: function () {
         const { currentDatetime, endDatetime } = this
         return isBefore(endDatetime, currentDatetime)
@@ -29,7 +38,7 @@
         return isWithinRange(currentDatetime, startDatetime, endDatetime)
       },
       startTime: function () {
-        return format(this.startDatetime, 'HH:mm')
+        return format(this.startDatetime, 'hh:mm a')
       }
     }
   }
@@ -40,9 +49,35 @@
 
   .event {
     display: flex;
+    margin: 2rem 0;
+
+    &:first-child {
+      margin-top: 15vh;
+    }
+
+    &:last-child {
+      margin-bottom: 15vh;
+    }
 
     & > * {
-      margin: 0.5rem 0.2rem;
+      margin: 0 0.2rem;
+
+      &.time {
+        flex: 1;
+        text-align: right;
+        margin-right: 1rem;
+        margin-top: .2em;
+      }
+
+      &.title {
+        flex: 5;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+      }
     }
   }
 
