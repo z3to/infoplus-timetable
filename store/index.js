@@ -8,6 +8,8 @@ import addMinutes from 'date-fns/add_minutes'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import isWithinRange from 'date-fns/is_within_range'
 import getTime from 'date-fns/get_time'
+import isBefore from 'date-fns/is_before'
+import isAfter from 'date-fns/is_after'
 import * as data from '../data/timetable.json'
 import VueScrollTo from 'vue-scrollto'
 
@@ -55,6 +57,16 @@ const store = () => new Vuex.Store({
   getters: {
     currentDay: state => {
       return _.get(state.timetable, format(state.currentDatetime, 'YYYY-MM-DD'), [])
+    },
+    isMorning: (state, getters) => {
+      const { currentDatetime } = state
+      const { currentDay } = getters
+      return isBefore(currentDatetime, _.head(currentDay).startDatetime)
+    },
+    isEvening: (state, getters) => {
+      const { currentDatetime } = state
+      const { currentDay } = getters
+      return isAfter(currentDatetime, _.last(currentDay).endDatetime)
     },
     currentEvent: (state, getters) => {
       const { currentDatetime } = state

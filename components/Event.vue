@@ -1,13 +1,19 @@
 <template>
   <li :class="{ 'event': true, isNow, isPast }">
-    <span class="time">{{ startTime }}</span>
-    <hgroup class="title">
+    <span :class="{ time: true, isLightningTalkTitle }">{{ startTime }}</span>
+    <div class="title">
+      <span v-if="isLightningTalkTitle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.2 12.9">
+          <path d="M6.8 0L0 7.4h3.5l-1.3 5.5 7-7.7H5.4z"/>
+        </svg>
+        Lightning Talks
+      </span>
       <header class="header">
-        <h1 :class="{ isAdministrative }">{{ author }}</h1>
+        <h1 :class="{ isAdministrative, isLightningTalk }">{{ author }}</h1>
         <span v-if="isKeynote" :class="{ isKeynote }">Keynote</span>
       </header>
-      <h2 v-if="!isAdministrative">{{ title }}</h2>
-    </hgroup>
+      <h2 v-if="!isAdministrative && !isLightningTalk">{{ title }}</h2>
+    </div>
   </li>
 </template>
 
@@ -25,6 +31,12 @@
       ]),
       isAdministrative: function () {
         return this.category === 'administrative'
+      },
+      isLightningTalk: function () {
+        return this.category === 'lightning' || this.category === 'lightningtitle'
+      },
+      isLightningTalkTitle: function () {
+        return this.category === 'lightningtitle'
       },
       isKeynote: function () {
         return this.category === 'keynote'
@@ -67,10 +79,19 @@
         text-align: right;
         margin-right: 1rem;
         margin-top: .2em;
+
+        &.isLightningTalkTitle {
+          margin-top: 2rem;
+        }
       }
 
       &.title {
         flex: 5;
+
+        svg {
+          height: 1rem;
+          transform: translateY(2px);
+        }
 
         .header {
           display: flex;
