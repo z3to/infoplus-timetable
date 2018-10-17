@@ -10,6 +10,7 @@ import isWithinRange from 'date-fns/is_within_range'
 import getTime from 'date-fns/get_time'
 import isBefore from 'date-fns/is_before'
 import isAfter from 'date-fns/is_after'
+import compareAsc from 'date-fns/compare_asc'
 import * as data from '../data/timetable.json'
 import VueScrollTo from 'vue-scrollto'
 
@@ -51,12 +52,38 @@ Vue.use(VueScrollTo)
 const store = () => new Vuex.Store({
   state: {
     ...config,
-    currentDatetime: new Date(2018, 9, 20, 9, 16, 0),
-    timetable
+    currentDatetime: new Date(),
+    timetable,
+    isDynamicTime: true
   },
   getters: {
-    currentDay: state => {
-      return _.get(state.timetable, format(state.currentDatetime, 'YYYY-MM-DD'), [])
+    range: state => {
+      return _.map(_.keys(timetable), str => {
+        const parts = str.split('-')
+        return new Date(parts[0], parts[1] - 1, parts[2])
+      }).sort(compareAsc)
+    },
+    startRange: (state, getters) => {
+      return _.head(getters.range)
+    },
+    endRange: (state, getters) => {
+      return _.last(getters.range)
+    },
+    tooEarly: (state, getters) => {
+      return isBefore(state.currentDatetime, getters.startRange)
+    },
+    tooLate: (state, getters) => {
+      return isAfter(state.currentDatetime, getters.endRange)
+    },
+    currentDay: (state, getters) => {
+      const { tooEarly, tooLate, startRange, endRange } = getters
+      let currentDateTime = state.currentDatetime
+      if (tooEarly) {
+        currentDateTime = startRange
+      } else if (tooLate) {
+        currentDateTime = endRange
+      }
+      return _.get(state.timetable, format(currentDateTime, 'YYYY-MM-DD'))
     },
     isMorning: (state, getters) => {
       const { currentDatetime } = state
@@ -81,7 +108,24 @@ const store = () => new Vuex.Store({
   },
   mutations: {
     SET_CURRENT_TIME (state, value) {
+      state.isDynamicTime = false
       state.currentDatetime = value
+    },
+    UPDATE_CURRENT_TIME (state) {
+      state.currentDatetime = new Date()
+    },
+    SET_DYNAMIC_TIME (state, value) {
+      state.isDynamicTime = value
+    }
+  },
+  actions: {
+    updateTime ({ state, commit }) {
+      if (state.isDynamicTime) {
+        commit('UPDATE_CURRENT_TIME')
+      }
+    },
+    toggleDynamicTime ({ commit }) {
+      commit('TOGGLE_DYNAMIC_TIME')
     }
   }
 })

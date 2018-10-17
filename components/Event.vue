@@ -1,5 +1,5 @@
 <template>
-  <li :class="{ 'event': true, isNow, isPast }">
+  <li :class="{ 'event': true, isNow, isPast, isLightningTalk }">
     <span :class="{ time: true, isLightningTalkTitle }">{{ startTime }}</span>
     <div class="title">
       <span v-if="isLightningTalkTitle">
@@ -62,6 +62,10 @@
   .event {
     display: flex;
     margin: 2rem 0;
+
+    &.isLightningTalk {
+      margin: 1rem 0;
+    }
 
     &:first-child {
       margin-top: 15vh;

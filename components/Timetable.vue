@@ -41,7 +41,7 @@
         if (_.isUndefined(el)) {
           el = this.isMorning ? _.head(this.$refs.event) : _.last(this.$refs.event)
         }
-        VueScrollTo.scrollTo(_.get(el, '$el', null), 500, { offset: -100 })
+        VueScrollTo.scrollTo(_.get(el, '$el', null), 500, { offset: -150 })
       }, 500)
     }
   }

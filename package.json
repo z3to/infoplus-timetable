@@ -5,7 +5,7 @@
   "author": "Jonas <parnow@fh-potsdam.de>",
   "private": true,
   "scripts": {
-    "dev": "PORT=3034 nuxt",
+    "dev": "PORT=3035 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

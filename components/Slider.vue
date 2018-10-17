@@ -2,6 +2,7 @@
   <section class="slider">
     {{ display }}<br />
     <input type="range" v-model="position" :min="min" :max="max" step="1" />
+    <input type="checkbox" v-model="isDynamicTime" /> Dynamic time
   </section>
 </template>
 
@@ -32,6 +33,14 @@
         set (value) {
           this.$store.commit('SET_CURRENT_TIME', parse(parseInt(value)))
         }
+      },
+      isDynamicTime: {
+        get () {
+          return getTime(this.$store.state.isDynamicTime)
+        },
+        set (value) {
+          this.$store.commit('SET_DYNAMIC_TIME', value)
+        }
       }
     }
   }
@@ -40,15 +49,20 @@
 <style lang="scss" scoped>
   @import "~@/assets/style/variables";
 
-  input {
-    width: 250px;
-  }
-
   .slider {
+    opacity: 0;
     position: fixed;
     bottom: 0;
     background-color: #222;
     color: #fff;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    input {
+      width: 100vw;
+    }
   }
 
 </style>

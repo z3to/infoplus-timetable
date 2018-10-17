@@ -3,7 +3,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   letter-spacing: .3px;
   transition: color $transition-default linear;
   font-weight: $font-weight-default;
@@ -30,7 +30,7 @@ span {
   font-family: $font-mono;
 
   &.time {
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: .4px;
     text-transform: uppercase;
     line-height: 1.5;
@@ -62,3 +62,30 @@ span {
 .isPast {
   color: rgba(0, 0, 0, 0.4);
 }
+
+.isDark {
+  .isKeynote {
+    color: #000;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .isNow {
+    h1, h2 {
+      color: $color-accent;
+    }
+
+    .isKeynote {
+      background: $color-accent;
+    }
+  }
+
+  .isPast {
+    color: rgba(255, 255, 255, 0.4);
+
+    .isKeynote {
+      color: #000;
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
