@@ -54,7 +54,8 @@ const store = () => new Vuex.Store({
     ...config,
     currentDatetime: new Date(),
     timetable,
-    isDynamicTime: true
+    isDynamicTime: true,
+    isDark: false
   },
   getters: {
     range: state => {
@@ -116,6 +117,9 @@ const store = () => new Vuex.Store({
     },
     SET_DYNAMIC_TIME (state, value) {
       state.isDynamicTime = value
+    },
+    SET_THEME (state, value) {
+      state.isDark = value
     }
   },
   actions: {
@@ -126,6 +130,9 @@ const store = () => new Vuex.Store({
     },
     toggleDynamicTime ({ commit }) {
       commit('TOGGLE_DYNAMIC_TIME')
+    },
+    setTheme ({ commit }, value) {
+      commit('SET_THEME', value)
     }
   }
 })

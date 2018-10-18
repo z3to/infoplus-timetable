@@ -2,7 +2,8 @@
   <section class="slider">
     {{ display }}<br />
     <input type="range" v-model="position" :min="min" :max="max" step="1" />
-    <input type="checkbox" v-model="isDynamicTime" /> Dynamic time
+    <label><input type="checkbox" v-model="isDynamicTime" /> Dynamic time</label>
+    <label><input type="checkbox" v-model="isDark" /> Dark theme </label>
   </section>
 </template>
 
@@ -41,6 +42,14 @@
         set (value) {
           this.$store.commit('SET_DYNAMIC_TIME', value)
         }
+      },
+      isDark: {
+        get () {
+          return getTime(this.$store.state.isDark)
+        },
+        set (value) {
+          this.$store.commit('SET_THEME', value)
+        }
       }
     }
   }
@@ -60,8 +69,16 @@
       opacity: 1;
     }
 
-    input {
+    input[type="range"] {
       width: 100vw;
+    }
+
+    label {
+      margin-right: 2em;
+
+      & > * {
+        display: inline-block;
+      }
     }
   }
 

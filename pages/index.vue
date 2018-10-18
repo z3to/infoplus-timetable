@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
   import Timetable from '~/components/Timetable.vue'
   import Slider from '~/components/Slider.vue'
   import has from 'lodash/has'
@@ -22,17 +22,19 @@
       Slider
     },
     computed: {
-      isDark: function () {
-        return has(this.$route.query, 'dark')
-      }
+      ...mapState([
+        'isDark'
+      ])
     },
     methods: {
       ...mapActions([
-        'updateTime'
+        'updateTime',
+        'setTheme'
       ])
     },
     created () {
       this.interval = setInterval(this.updateTime, 1000)
+      this.setTheme(has(this.$route.query, 'dark'))
     },
     beforeDestroy () {
       clearInterval(this.interval)
