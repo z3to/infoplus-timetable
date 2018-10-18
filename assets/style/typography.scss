@@ -3,7 +3,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   letter-spacing: .3px;
   transition: color $transition-default linear;
   font-weight: $font-weight-default;
@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: .3px;
   line-height: 1.5;
   font-weight: $font-weight-default;
@@ -39,8 +39,8 @@ span {
   }
 
   &.isKeynote {
-    font-size: 0.8rem;
     display: inline-block;
+    font-size: 1rem;
     padding: .15em .4em;
     letter-spacing: .4px;
     text-transform: uppercase;
@@ -89,3 +89,26 @@ span {
   }
 }
 
+.isBigScreen {
+  h1 {
+    font-size: 2.4rem;
+
+    &.isLightningTalk {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  span {
+    &.time {
+      font-size: 1.2rem;
+    }
+
+    &.isKeynote {
+      font-size: 0.8rem;
+    }
+  }
+}
