@@ -106,4 +106,16 @@
     }
   }
 
+  .isBigScreen {
+    .event {
+      margin: 1.2rem 0;
+
+      .time {
+        &.isLightningTalkTitle {
+          margin-top: 1.8rem !important;
+        }
+      }
+    }
+  }
+
 </style>
