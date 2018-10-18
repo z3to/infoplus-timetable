@@ -30,12 +30,14 @@
     methods: {
       ...mapActions([
         'updateTime',
-        'setTheme'
+        'setTheme',
+        'setBigScreen'
       ])
     },
     created () {
       this.interval = setInterval(this.updateTime, 1000)
       this.setTheme(has(this.$route.query, 'dark'))
+      this.setBigScreen(has(this.$route.query, 'screen'))
     },
     beforeDestroy () {
       clearInterval(this.interval)

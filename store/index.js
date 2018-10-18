@@ -137,6 +137,9 @@ const store = () => new Vuex.Store({
     },
     setTheme ({ commit }, value) {
       commit('SET_THEME', value)
+    },
+    setBigScreen ({ commit }, value) {
+      commit('SET_SCREEN', true)
     }
   }
 })
