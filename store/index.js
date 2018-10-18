@@ -55,7 +55,8 @@ const store = () => new Vuex.Store({
     currentDatetime: new Date(),
     timetable,
     isDynamicTime: true,
-    isDark: false
+    isDark: false,
+    isBigScreen: false
   },
   getters: {
     range: state => {
@@ -120,6 +121,9 @@ const store = () => new Vuex.Store({
     },
     SET_THEME (state, value) {
       state.isDark = value
+    },
+    SET_SCREEN (state, value) {
+      state.isBigScreen = value
     }
   },
   actions: {

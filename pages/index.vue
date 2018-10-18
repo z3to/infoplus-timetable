@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ wrapper: true, isDark }">
+  <div :class="{ wrapper: true, isDark, isBigScreen }">
     <Timetable />
     <Slider />
   </div>
@@ -23,7 +23,8 @@
     },
     computed: {
       ...mapState([
-        'isDark'
+        'isDark',
+        'isBigScreen'
       ])
     },
     methods: {
@@ -53,6 +54,12 @@
     &.isDark {
       background-color: #000;
       color: rgba(255, 255, 255, 0.8);
+    }
+
+    &.isBigScreen {
+      max-width: 46vw;
+      margin: 0;
+      margin-left: 2vw;
     }
 
     & > * {

@@ -4,6 +4,7 @@
     <input type="range" v-model="position" :min="min" :max="max" step="1" />
     <label><input type="checkbox" v-model="isDynamicTime" /> Dynamic time</label>
     <label><input type="checkbox" v-model="isDark" /> Dark theme </label>
+    <label><input type="checkbox" v-model="isBigScreen" /> Big Screen </label>
   </section>
 </template>
 
@@ -49,6 +50,14 @@
         },
         set (value) {
           this.$store.commit('SET_THEME', value)
+        }
+      },
+      isBigScreen: {
+        get () {
+          return getTime(this.$store.state.isBigScreen)
+        },
+        set (value) {
+          this.$store.commit('SET_SCREEN', value)
         }
       }
     }

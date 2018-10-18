@@ -68,11 +68,11 @@
     }
 
     &:first-child {
-      margin-top: 15vh;
+      margin-top: 4vh;
     }
 
     &:last-child {
-      margin-bottom: 15vh;
+      margin-bottom: 4vh;
     }
 
     & > * {
