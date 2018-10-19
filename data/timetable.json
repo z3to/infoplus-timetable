@@ -53,7 +53,7 @@
       "category": "talk",
       "title": "Quo vadis, Isotype?",
       "start": "10:20",
-      "author": "Günther Schreder & Eva Mayr",
+      "author": "Günther Schreder + Eva Mayr",
       "abstract": "About 100 years ago, Otto Neurath developed the International System of Typographic Picture Education (ISOTYPE) to visualize statistical data, support education, and communicate social and economic facts and processes in an intuitive way. While Neurath’s ideas inspired InfoVis and are well known among designers, little is known about effects on\nrecipients and Isotype has not been systematically applied in InfoVis. The first part of our presentation addresses the cognitive effects of pictorial statistics. The second part will explore future extensions of Isotype into contemporary InfoVis by leveraging animation, storytelling, and interactivity to not only communicate facts, but also support active\nreception and reflective thinking.\n<br/><br/>\nIn our talk, we discuss which types of diagrams and visualizations, aside from bar charts and maps, would be suitable for (partial) isotypization. What would storytelling with ISOTYPE look like (film, data documentaries)? Is it possible to take Neurath’s ideas to the 21st century?",
       "affiliations": "Günther Schreder and Eva Mayr, Danube University Krems, AT",
       "allauthors": "Günther Schreder, Florian Windhager, Nicole Hynek, Georg Neubauer, Florian Halm and Eva Mayr",
@@ -101,7 +101,7 @@
       "category": "talk",
       "title": "Designing an optimal document in the health sector",
       "start": "12:00",
-      "author": "Guillermina Noël & Jorge Frascara",
+      "author": "Guillermina Noël + Jorge Frascara",
       "abstract": "Medical personnel usually write and design documents that inform physicians or patients about procedures or therapies. Document design, however, requires skills that are not normally applied, resulting in information that is often not used properly.\n</br></br>\nThe Alberta Colorectal Cancer Screening Program commissioned us to re-design existing instructional documents. We reviewed them, developed performance specifications for their re-design, and used an iterative process of prototypes and testing, also resorting to literature on reading comprehension, memorization and use of information, involving plain language, visual perception, page layout, legibility, editorial consistency and use of images.\n</br></br>\nTo redesign the document we identified 23 principles based on peer-reviewed research. We tested each iteration with users to ensure ease of use, completeness of information, accuracy and clarity, to facilitate adoption.\n</br></br>\nThe document has been downloaded 26,000 times, suggesting a good physician reception. An evaluation of the impact on use of the information by patients is underway.",
       "affiliations": "Guillermina Noel and Jorge Frascara, University of Alberta, Edmonton, CA",
       "allauthors": "Guillermina Noel, Jorge Frascara and Clarence Wong",
@@ -160,7 +160,7 @@
     {
       "category": "talk",
       "daytime": "pm",
-      "author": "Olivia Vane & Stephen Boyd Davis",
+      "author": "Olivia Vane + Stephen Boyd Davis",
       "title": "Designers — what are they good for (in data visualisation)?",
       "start": "02:05",
       "abstract": "Our focus is the digital humanities, especially visualisation of datasets such as text archives and object collections data in museums. The name “digital humanities” implies just two disciplines, computing and the humanities. What is the designer’s role?  Collectively we should be able to explain what our contribution is —especially when some may fear our replacement by AI systems. We argue that there are particular aspects of designing that are distinctive and can enable more effective visualisations to be produced: (1) expertise in the visual articulation of meaning, (2) human-centric methods, and (3) the quick and adaptable use of low-fidelity early prototyping. We base our argument especially on the idea of design as a form of inquiry or research, and illustrate the three benefits using our recent interactive data visualisations with organisations including the Wellcome Library, Cooper Hewitt Smithsonian Design Museum and V&A London.",
@@ -184,7 +184,7 @@
     {
       "category": "talk",
       "daytime": "pm",
-      "author": "Doris Kosminsky & Jagoda Walny",
+      "author": "Doris Kosminsky + Jagoda Walny",
       "title": "Belief at first sight: Data visualization and the rationalization of seeing",
       "start": "02:45",
       "abstract": "Data visualization has been increasingly represented in public discourse as an objective proof of facts. However, visualization is only a single translation of reality. It is crucial that we consider why data visualization has been primarily thought of as truth, irrespective of the origin of the data, its processing, the choices made by designers, developers and clients, or its display context. We reflect theoretically on data visualization as a system of representation historically anchored in science and rationalism. It establishes itself within a lineage of conventions for visual representation grounded in objectivity and rationality, which extends from the Renaissance perspective to the present passing through the photographic image, movies, TV, and finally computer graphics. By starting a discussion about the tendency to see a “natural” credibility in data visualization rooted in its historical context, we might broaden our approach to presenting data visualizations in the public discourse.",
@@ -196,7 +196,7 @@
     {
       "category": "lightningtitle",
       "daytime": "pm",
-      "author": "Sibylle Schlaich & Anita Meier",
+      "author": "Sibylle Schlaich + Anita Meier",
       "title": "Public pictograms: Pointing out trends for the future",
       "start": "03:10",
       "abstract": "In this presentation, we give a brief summary of a study to draw the attention to the challenging perception of the two public information pictograms: “elevator” and “toilet”. In wayfinding and on signage, both indicate the location of a destination. Although the semantic information is completely different, both pictograms partly visualize the same: Front view of standing human figures. On signs and in certain contexts this can lead to confusion.\n</br></br>\nThe representation of human figures is increasingly being questioned on the basis of public and political discussions on gender issues. Moreover, attention to accessibility is also strongly incorporated in these two pictograms. Thus, both pictograms are in an evolution process in order to meet current requirements. Do more messages require a more complex pictogram? How far can we go?\n</br></br>\nWe envision that this study will raise awareness of the handling of these pictograms and point out trends for future visualization.",
@@ -244,7 +244,7 @@
     {
       "category": "talk",
       "daytime": "pm",
-      "author": "Grga Basic & Francesca Berardi",
+      "author": "Grga Basic + Francesca Berardi",
       "title": "We Can: Data driven project exploring the lives of NYC canners",
       "start": "04:10",
       "abstract": "Canning —picking up cans and bottles on the streets for a living— has been an increasingly popular activity in New York City for over 30 years, becoming an indirect welfare system created and sustained by redeeming garbage, worth 5 cents apiece. Over the past year, journalist Francesca Berardi followed a group of canners in their daily activity, collecting qualitative and quantitative information about their work. They come in the forms of handwritten notes, sketches, oral history interviews, photos, videos, and GPS tracks of their itineraries. We Can combines the aforementioned media into an interactive and immersive web experience. As the stories of canners unfold across mental maps of the city that take shape through illustration, analogue data visualization, and oral history, we push for new and experimental forms of urban storytelling that explores a more co-owned narrative through pairing geospatial data with the extraordinary nuances of human lives and experiences.",
@@ -268,7 +268,7 @@
     {
       "category": "keynote",
       "daytime": "pm",
-      "author": "Reuben Fischer-Baum & Chiqui Esteban",
+      "author": "Reuben Fischer-Baum + Chiqui Esteban",
       "title": "Working in a graphics visual storytelling team",
       "start": "04:55",
       "abstract": "The Washington Post graphics team has moved on from the classical role of graphics departments to become a one-stop shop for visual narrative content. The role of this group is not only focused on creating graphics and visualizations as isolated items, but to develop complete stories that use visual content as the main vehicle to transmit information. That doesn’t mean forgetting the value of the text, the power of other visual formats like video, illustration or photo, the advantages of an attractive design, the eventual bells and whistles or even the little charts and locators that make the day-to-day of a newsroom. Narrative structure, constant edition, rigor, but also originality, boldness and fun are the pillars of, not a collection of individuals, but a team created with diversity of skills and backgrounds in mind: cartographers, engineers, writers, data reporters, designers, graphics artists … but journalists first.",
@@ -306,7 +306,7 @@
     {
       "category": "keynote",
       "daytime": "am",
-      "author": "Fernanda Viégas & Martin Wattenberg",
+      "author": "Fernanda Viégas + Martin Wattenberg",
       "title": "Data visualization for machine learning",
       "start": "09:30",
       "abstract": "Machine learning is playing an increasingly influential role in the world due to dramatic technical leaps in recent years. But these new developments bring their own questions. How can we understand what is going on under the hood of deep neural networks? How can we better debug these systems? How can we broaden the conversation about ML-enabled automated decision making? It turns out that visualization can play a central role in answering these questions. We'll discuss recent work that shows how interactive exploration can help people use, interpret, and learn about machine intelligence.",
@@ -318,7 +318,7 @@
     {
       "category": "talk",
       "daytime": "am",
-      "author": "Christian Au, Christian Laesser, Moritz Stefaner, Stephan Thiel",
+      "author": "Christian Au + Christian Laesser + Stephan Thiel ",
       "title": "Peakspotting — a visual tool for managing the capacity of Germany’s rail traffic network",
       "start": "10:15",
       "abstract": "The Peak Spotting software combines machine learning and visual analytics to help manage Germany’s rail traffic network. The project allows yield and capacity managers to identify potential bottlenecks based on passenger load predictions. It provides actionable information to several teams through data exploration and collaboration features, which contribute directly to improving planning and management.\n<br/><br/>\nIn this talk, we present a design case study and share our lessons learned in enabling innovation in complex corporate settings. We will discuss the full design and development process of the tool from ideation, data and concept exploration over design and implementation to usage tracking and iterative refinement.\n<br/><br/>\nOf particular interest is the role of automation and analytics tools in digital transformation processes — how can we facilitate the transition from manual work and implicit knowledge to higher level tasks, supported by algorithms and visual analytics tools? And how does this change operational processes and job profiles?",
@@ -354,7 +354,7 @@
     {
       "category": "talk",
       "daytime": "am",
-      "author": "Jesse Josua Benjamin",
+      "author": "Jesse Josua Benjamin + Claudia Müller-Birn",
       "title": "Designing for algorithm awareness in peer production systems",
       "start": "11:35",
       "abstract": "Algorithms increasingly impact human decision-making by stimulating, informing, controlling and reacting to human activities, thus, necessitating the need for algorithm explainability. In this project, we investigate the RECOIN (Relative Completeness Indicator) tool as a use case for algorithm awareness; a current topic delineating the extent to which a person is contextually aware of the existence and function of algorithms. RECOIN is a tool for Wikidata, a collaborative knowledge base that stores structured data and supports numerous Wikimedia projects. RECOIN aims to augment human decision-making on data contributions by measuring the relative completeness of data items and by recommending potential contributions. With concerns over encoded cultural bias, RECOIN reflects the complexities of co-evolving social and algorithmic governance mechanisms. Addressing these issues, we showcase three distinct visualisation designs of RECOIN through the lens of algorithm awareness and discuss experimental findings regarding their varying effects on human decision-making and understanding.",
@@ -414,7 +414,7 @@
     {
       "category": "talk",
       "daytime": "pm",
-      "author": "Kelly Murdoch-Kitt & Denielle J. Emans",
+      "author": "Kelly Murdoch-Kitt + Denielle J. Emans",
       "title": "Participatory data visualizations support intercultural collaboration",
       "start": "02:15",
       "abstract": "Although tools for working across distance and time are prevalent, inexpensive, and accessible to many, their existence does not guarantee successful intercultural work. Culturally attuned methods are the missing ingredient to bring design teams together across geographic and social borders. Participatory information visualizations —created by students or professional design practitioners involved in intercultural collaborations— can contribute significantly to a shared sense of community. The authors’ ongoing research has produced several participatory visualization methods; one recent method that holds great promise is the High-Low Context Matrix. Created in real time through a combination of physical and digital tools, this matrix shows how each participant maps along the cultural continuums developed by anthropologist Edward T. Hall, and helps participants envision each other as a collaborative community. The information visualization results in energized discussion among cross-cultural teammates —they begin to investigate culturally determined attitudes and linguistic patterns that shape communication, personality dynamics, and educational goals.",
