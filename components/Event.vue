@@ -50,6 +50,7 @@
         return isWithinRange(currentDatetime, startDatetime, endDatetime)
       },
       startTime: function () {
+        console.log(new Date(this.startDatetime).getTimezoneOffset())
         return format(this.startDatetime, 'hh:mm a')
       }
     }
