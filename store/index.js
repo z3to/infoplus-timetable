@@ -21,7 +21,8 @@ function setHourMinutes (date, hours, minutes) {
 }
 
 const timetable = _.fromPairs(_.map(data, (events, datum) => {
-  const date = new Date(datum)
+  const [year, month, day] = datum.split('-')
+  const date = new Date(year, (month - 1), day)
   let lastStartDateTime = false
   const _events = _.map(_.reverse(events), event => {
     const { daytime, start } = event
@@ -114,7 +115,7 @@ const store = () => new Vuex.Store({
       state.currentDatetime = value
     },
     UPDATE_CURRENT_TIME (state) {
-      state.currentDatetime = new Date(Date.UTC(year, month, day, hour, minute, second))
+      state.currentDatetime = new Date()
     },
     SET_DYNAMIC_TIME (state, value) {
       state.isDynamicTime = value
