@@ -23,6 +23,7 @@ function setHourMinutes (date, hours, minutes) {
 const timetable = _.fromPairs(_.map(data, (events, datum) => {
   // const [year, month, day] = datum.split('-')
   const date = new Date(datum)
+  console.log('timetable', date)
   let lastStartDateTime = false
   const _events = _.map(_.reverse(events), event => {
     const { daytime, start } = event
