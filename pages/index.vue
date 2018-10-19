@@ -59,9 +59,8 @@
     }
 
     &.isBigScreen {
-      max-width: 46vw;
+      max-width: 44vw;
       margin: 0;
-      margin-left: 2vw;
     }
 
     & > * {
