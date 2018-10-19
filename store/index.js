@@ -114,7 +114,7 @@ const store = () => new Vuex.Store({
       state.currentDatetime = value
     },
     UPDATE_CURRENT_TIME (state) {
-      state.currentDatetime = new Date()
+      state.currentDatetime = new Date(Date.UTC(year, month, day, hour, minute, second))
     },
     SET_DYNAMIC_TIME (state, value) {
       state.isDynamicTime = value
