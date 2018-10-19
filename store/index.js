@@ -38,6 +38,7 @@ const timetable = _.fromPairs(_.map(data, (events, datum) => {
     }
     const endDatetime = addMinutes(startDatetime, duration)
     lastStartDateTime = startDatetime
+    console.log('startDatetime event', startDatetime)
     return {
       ...event,
       startDatetime,
