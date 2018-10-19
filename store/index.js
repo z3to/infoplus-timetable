@@ -21,8 +21,8 @@ function setHourMinutes (date, hours, minutes) {
 }
 
 const timetable = _.fromPairs(_.map(data, (events, datum) => {
-  const [year, month, day] = datum.split('-')
-  const date = new Date(year, (month - 1), day)
+  // const [year, month, day] = datum.split('-')
+  const date = new Date(datum)
   let lastStartDateTime = false
   const _events = _.map(_.reverse(events), event => {
     const { daytime, start } = event
@@ -62,8 +62,8 @@ const store = () => new Vuex.Store({
   getters: {
     range: state => {
       return _.map(_.keys(timetable), str => {
-        const parts = str.split('-')
-        return new Date(parts[0], parts[1] - 1, parts[2])
+        // const parts = str.split('-')
+        return new Date(str)
       }).sort(compareAsc)
     },
     startRange: (state, getters) => {
@@ -86,7 +86,8 @@ const store = () => new Vuex.Store({
       } else if (tooLate) {
         currentDateTime = endRange
       }
-      return _.get(state.timetable, format(currentDateTime, 'YYYY-MM-DD'))
+      console.log(format(currentDateTime, 'YYYY-MM-DDT00:00:00+00:00'))
+      return _.get(state.timetable, format(currentDateTime, 'YYYY-MM-DDT00:00:00+00:00'))
     },
     isMorning: (state, getters) => {
       const { currentDatetime } = state
