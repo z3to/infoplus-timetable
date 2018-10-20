@@ -4,6 +4,7 @@ import _ from 'lodash'
 import format from 'date-fns/format'
 import setMinutes from 'date-fns/set_minutes'
 import setHours from 'date-fns/set_hours'
+import addHours from 'date-fns/add_hours'
 import addMinutes from 'date-fns/add_minutes'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
 import isWithinRange from 'date-fns/is_within_range'
@@ -118,7 +119,7 @@ const store = () => new Vuex.Store({
       state.currentDatetime = value
     },
     UPDATE_CURRENT_TIME (state) {
-      state.currentDatetime = new Date()
+      state.currentDatetime = addHours(new Date(), 2)
     },
     SET_DYNAMIC_TIME (state, value) {
       state.isDynamicTime = value
